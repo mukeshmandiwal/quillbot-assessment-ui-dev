@@ -19,7 +19,8 @@ function MainContainer({ drawerHandler }) {
     restHanlder,
   } = useMainContainer();
   const isMobile = useMediaQuery("(max-width:600px)");
-  const itemsPerRow = 6;
+  const isLaptop = useMediaQuery("(max-width:1600px)");
+  const itemsPerRow = isLaptop ? 5 : 6;
 
   return (
     <Box
